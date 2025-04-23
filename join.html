@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fengquan Zhou Lab - Join Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .page-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/join/head.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 120px 0;
+            margin-bottom: 40px;
+        }
+        .card-job {
+            border-left: 5px solid #0d6efd;
+            transition: transform 0.3s ease;
+        }
+        .card-job:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .team-card {
+            transition: all 0.3s ease;
+        }
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .team-card .btn {
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        .team-card:hover .btn {
+            visibility: visible;
+            opacity: 1;
+        }
+        .application-steps .step {
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f8f9fa;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            height: 100%;
+        }
+        .step-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: #0d6efd;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        /* 语言切换相关样式 */
+        .lang-en {
+            display: none;
+        }
+        
+        body.english .lang-zh {
+            display: none;
+        }
+        
+        body.english .lang-en {
+            display: inline-block;
+        }
+        
+        .language-selector {
+            cursor: pointer;
+        }
+        
+        .language-selector.active {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<!-- 导航栏 -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <span class="lang-zh">周峰泉课题组</span>
+            <span class="lang-en">Fengquan Zhou Lab</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        <span class="lang-zh">首页</span>
+                        <span class="lang-en">Home</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="team.html">
+                        <span class="lang-zh">团队</span>
+                        <span class="lang-en">Team</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="research.html">
+                        <span class="lang-zh">研究</span>
+                        <span class="lang-en">Research</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="publications.html">
+                        <span class="lang-zh">论文</span>
+                        <span class="lang-en">Publications</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="join.html">
+                        <span class="lang-zh">招聘</span>
+                        <span class="lang-en">Join Us</span>
+                    </a>
+                </li>
+                <!-- 语言切换 -->
+                <li class="nav-item d-flex align-items-center ms-3">
+                    <a class="nav-link language-selector active" href="#" id="lang-zh">中</a>
+                    <span class="text-white">|</span>
+                    <a class="nav-link language-selector" href="#" id="lang-en">EN</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- 页面标题 -->
+<div class="page-header">
+    <div class="container text-center">
+        <h1 class="display-3">
+            <span class="lang-zh">加入我们</span>
+            <span class="lang-en">Join Our Team</span>
+        </h1>
+        <p class="lead" style="font-size: 1.5rem;">
+            <span class="lang-zh">共同探索科学前沿，成就卓越研究</span>
+            <span class="lang-en">Explore the frontiers of science together and achieve excellence in research</span>
+        </p>
+    </div>
+</div>
+
+<!-- 招聘信息 -->
+<section class="container mb-5">
+    <h2 class="text-center mb-4">
+        <span class="lang-zh">最新招聘职位</span>
+        <span class="lang-en">Open Positions</span>
+    </h2>
+    <div class="row g-4">
+        <!-- 职位1 -->
+        <div class="col-lg-6">
+            <div class="card card-job h-100">
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <span class="lang-zh">博士后研究员</span>
+                        <span class="lang-en">Postdoctoral Researcher</span>
+                    </h4>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                        <span class="lang-zh">神经科学方向</span>
+                        <span class="lang-en">Neuroscience</span>
+                    </h6>
+                    <p class="card-text">
+                        <span class="lang-zh">负责开展神经退行性疾病机制研究及新型治疗方法开发，具体研究方向包括但不限于：</span>
+                        <span class="lang-en">Responsible for conducting research on mechanisms of neurodegenerative diseases and developing novel therapeutic approaches. Research areas include but are not limited to:</span>
+                    </p>
+                    <ul>
+                        <li>
+                            <span class="lang-zh">阿尔茨海默病和帕金森病的发病机制研究</span>
+                            <span class="lang-en">Pathogenesis of Alzheimer's and Parkinson's diseases</span>
+                        </li>
+                        <li>
+                            <span class="lang-zh">神经退行性疾病的早期诊断生物标志物开发</span>
+                            <span class="lang-en">Development of early diagnostic biomarkers for neurodegenerative diseases</span>
+                        </li>
+                        <li>
+                            <span class="lang-zh">基于基因编辑技术的神经疾病治疗策略</span>
+                            <span class="lang-en">Gene editing-based therapeutic strategies for neurological disorders</span>
+                        </li>
+                    </ul>
+                    <h5>
+                        <span class="lang-zh">要求：</span>
+                        <span class="lang-en">Requirements:</span>
+                    </h5>
+                    <ul>
+                        <li>
+                            <span class="lang-zh">神经科学、分子生物学或相关领域博士学位</span>
+                            <span class="lang-en">PhD in neuroscience, molecular biology, or related fields</span>
+                        </li>
+                        <li>
+                            <span class="lang-zh">熟练掌握分子生物学、细胞培养和动物模型相关技术</span>
+                            <span class="lang-en">Proficient in molecular biology techniques, cell culture, and animal models</span>
+                        </li>
+                        <li>
+                            <span class="lang-zh">有高质量SCI论文发表经历</span>
+                            <span class="lang-en">Publication record in high-quality SCI journals</span>
+                        </li>
+                        <li>
+                            <span class="lang-zh">良好的英语读写和沟通能力</span>
+                            <span class="lang-en">Good English reading, writing, and communication skills</span>
+                        </li>
+                    </ul>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#applyModal">
+                        <span class="lang-zh">申请此职位</span>
+                        <span class="lang-en">Apply for this Position</span>
+                    </button>
+                </div>
+                <div class="card-footer text-muted">
+                    <span class="lang-zh">发布日期: 2025年10月15日</span>
+                    <span class="lang-en">Posted: October 15, 2025</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 职位2 -->
+        <div class="col-lg-6">
+            <div class="card card-job h-100">
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <span class="lang-zh">科研助理</span>
+                        <span class="lang-en">Research Assistant</span>
+                    </h4>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                        <span class="lang-zh">分子生物学实验室</span>
+                        <span class="lang-en">Molecular Biology Laboratory</span>
+                    </h6>
+                    <p class="card-text">
+                        <span class="lang-zh">负责维护实验室日常运行，协助课题组开展科研工作，具体职责包括：</span>
+                        <span class="lang-en">Responsible for maintaining daily laboratory operations and assisting with research activities. Duties include:</span>
+                    </p>
+                    <ul>
+                        <li>
+                            <span class="lang-zh">分子生物学实验操作（PCR、Western Blot等）</span>
+                            <span class="lang-en">Molecular biology experiments (PCR, Western Blot, etc.)</span>
+                        </li>
+                        <li>
+                            <span class="lang-zh">细胞培养与相关细胞实验</span>
+                            <span class="lang-en">Cell culture and related cellular experiments</span>
+                        </li>
+                        <li>
+                            <span class="lang-zh">实验室试剂采购与管理</span>
+                            <span class="lang-en">Laboratory reagent procurement and management</span>
+                        </li>
+                        <li>
+                            <span class="lang-zh">实验数据收集与整理</span>
+                            <span class="lang-en">Experimental data collection and organization</span>
+                        </li>
+                    </ul>
+                    <h5>
+                        <span class="lang-zh">要求：</span>
+                        <span class="lang-en">Requirements:</span>
+                    </h5>
+                    <ul>
+                        <li>
+                            <span class="lang-zh">生物学、医学或相关专业本科及以上学历</span>
+                            <span class="lang-en">Bachelor's degree or above in biology, medicine, or related fields</span>
+                        </li>
+                        <li>
+                            <span class="lang-zh">有实验室工作经验优先</span>
+                            <span class="lang-en">Previous laboratory experience preferred</span>
+                        </li>
+                        <li>
+                            <span class="lang-zh">工作认真负责，有良好的团队合作精神</span>
+                            <span class="lang-en">Diligent and responsible, with good teamwork spirit</span>
+                        </li>
+                        <li>
+                            <span class="lang-zh">能够熟练使用常用办公和数据分析软件</span>
+                            <span class="lang-en">Proficient in common office and data analysis software</span>
+                        </li>
+                    </ul>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#applyModal">
+                        <span class="lang-zh">申请此职位</span>
+                        <span class="lang-en">Apply for this Position</span>
+                    </button>
+                </div>
+                <div class="card-footer text-muted">
+                    <span class="lang-zh">发布日期: 2025年10月10日</span>
+                    <span class="lang-en">Posted: October 10, 2025</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 职位3 -->
+        <div class="col-lg-6">
+            <div class="card card-job h-100">
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <span class="lang-zh">博士研究生</span>
+                        <span class="lang-en">PhD Student</span>
+                    </h4>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                        <span class="lang-zh">2026年秋季入学</span>
+                        <span class="lang-en">Fall 2026 Admission</span>
+                    </h6>
+                    <p class="card-text">
+                        <span class="lang-zh">课题组面向2026年秋季入学招收博士研究生，研究方向包括：</span>
+                        <span class="lang-en">We are recruiting PhD students for Fall 2026 admission in the following research areas:</span>
+                    </p>
+                    <ul>
+                        <li>
+                            <span class="lang-zh">免疫细胞治疗技术研发</span>
+                            <span class="lang-en">Development of immune cell therapy technologies</span>
+                        </li>
+                        <li>
+                            <span class="lang-zh">基因编辑技术在疾病治疗中的应用</span>
+                            <span class="lang-en">Applications of gene editing in disease treatment</span>
+                        </li>
+                        <li>
+                            <span class="lang-zh">神经退行性疾病机制研究</span>
+                            <span class="lang-en">Mechanisms of neurodegenerative diseases</span>
+                        </li>
+                    </ul>
+                    <h5>
+                        <span class="lang-zh">要求：</span>
+                        <span class="lang-en">Requirements:</span>
+                    </h5>
+                    <ul>
+                        <li>
+                            <span class="lang-zh">生物、医学或相关专业硕士学位</span>
+                            <span class="lang-en">Master's degree in biology, medicine, or related fields</span>
+                        </li>
+                        <li>
+                            <span class="lang-zh">有较强的科研兴趣和创新意识</span>
+                            <span class="lang-en">Strong interest in research and innovative thinking</span>
+                        </li>
+                        <li>
+                            <span class="lang-zh">英语良好，具备阅读和撰写英文论文的能力</span>
+                            <span class="lang-en">Good English skills with ability to read and write academic papers</span>
+                        </li>
+                        <li>
+                            <span class="lang-zh">有分子生物学或细胞生物学研究经验者优先</span>
+                            <span class="lang-en">Experience in molecular or cellular biology research preferred</span>
+                        </li>
+                    </ul>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#applyModal">
+                        <span class="lang-zh">申请此职位</span>
+                        <span class="lang-en">Apply for this Position</span>
+                    </button>
+                </div>
+                <div class="card-footer text-muted">
+                    <span class="lang-zh">发布日期: 2025年9月25日 | 截止日期: 2025年12月31日</span>
+                    <span class="lang-en">Posted: September 25, 2025 | Deadline: December 31, 2025</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 职位4 -->
+        <div class="col-lg-6">
+            <div class="card card-job h-100">
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <span class="lang-zh">访问学者</span>
+                        <span class="lang-en">Visiting Scholar</span>
+                    </h4>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                        <span class="lang-zh">短期合作项目</span>
+                        <span class="lang-en">Short-term Collaboration</span>
+                    </h6>
+                    <p class="card-text">
+                        <span class="lang-zh">课题组欢迎国内外高校、研究所的教师和研究人员申请访问学者项目，开展短期合作研究。</span>
+                        <span class="lang-en">We welcome faculty and researchers from universities and research institutes worldwide to apply for visiting scholar positions for short-term collaborative research.</span>
+                    </p>
+                    <h5>
+                        <span class="lang-zh">合作领域：</span>
+                        <span class="lang-en">Collaboration Areas:</span>
+                    </h5>
+                    <ul>
+                        <li>
+                            <span class="lang-zh">神经科学与神经疾病</span>
+                            <span class="lang-en">Neuroscience and neurological disorders</span>
+                        </li>
+                        <li>
+                            <span class="lang-zh">免疫学与自身免疫疾病</span>
+                            <span class="lang-en">Immunology and autoimmune diseases</span>
+                        </li>
+                        <li>
+                            <span class="lang-zh">基因编辑与基因治疗</span>
+                            <span class="lang-en">Gene editing and gene therapy</span>
+                        </li>
+                        <li>
+                            <span class="lang-zh">生物信息学与大数据分析</span>
+                            <span class="lang-en">Bioinformatics and big data analysis</span>
+                        </li>
+                    </ul>
+                    <h5>
+                        <span class="lang-zh">要求：</span>
+                        <span class="lang-en">Requirements:</span>
+                    </h5>
+                    <ul>
+                        <li>
+                            <span class="lang-zh">相关领域副教授及以上职称或具有同等研究能力</span>
+                            <span class="lang-en">Associate professor or above in related fields, or equivalent research capability</span>
+                        </li>
+                        <li>
+                            <span class="lang-zh">访问期间有明确的研究计划和目标</span>
+                            <span class="lang-en">Clear research plan and objectives for the visiting period</span>
+                        </li>
+                        <li>
+                            <span class="lang-zh">访问期限一般为3-12个月</span>
+                            <span class="lang-en">Visiting duration typically 3-12 months</span>
+                        </li>
+                    </ul>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#applyModal">
+                        <span class="lang-zh">申请此职位</span>
+                        <span class="lang-en">Apply for this Position</span>
+                    </button>
+                </div>
+                <div class="card-footer text-muted">
+                    <span class="lang-zh">发布日期: 2025年9月1日 | 长期有效</span>
+                    <span class="lang-en">Posted: September 1, 2025 | Ongoing</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- 申请流程 -->
+<section class="container py-5">
+    <h2 class="text-center mb-5">
+        <span class="lang-zh">申请流程</span>
+        <span class="lang-en">Application Process</span>
+    </h2>
+    
+    <div class="row g-4 application-steps">
+        <div class="col-md-3">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h5>
+                    <span class="lang-zh">准备申请材料</span>
+                    <span class="lang-en">Prepare Materials</span>
+                </h5>
+                <p>
+                    <span class="lang-zh">准备个人简历、自述信、研究计划和代表性论文全文</span>
+                    <span class="lang-en">Prepare your CV, personal statement, research plan, and representative publications</span>
+                </p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="step">
+                <div class="step-number">2</div>
+                <h5>
+                    <span class="lang-zh">提交申请</span>
+                    <span class="lang-en">Submit Application</span>
+                </h5>
+                <p>
+                    <span class="lang-zh">通过邮件或在线申请系统提交全部申请材料</span>
+                    <span class="lang-en">Submit all application materials via email or our online application system</span>
+                </p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="step">
+                <div class="step-number">3</div>
+                <h5>
+                    <span class="lang-zh">初审与面试</span>
+                    <span class="lang-en">Review & Interview</span>
+                </h5>
+                <p>
+                    <span class="lang-zh">通过初审的候选人将被邀请参加远程或现场面试</span>
+                    <span class="lang-en">Shortlisted candidates will be invited for remote or on-site interviews</span>
+                </p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="step">
+                <div class="step-number">4</div>
+                <h5>
+                    <span class="lang-zh">录用通知</span>
+                    <span class="lang-en">Offer Letter</span>
+                </h5>
+                <p>
+                    <span class="lang-zh">成功候选人将收到正式录用通知和后续入职安排</span>
+                    <span class="lang-en">Successful candidates will receive an official offer letter and onboarding instructions</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="text-center mt-5">
+        <p class="mb-4">
+            <span class="lang-zh">如有任何问题，请联系：</span>
+            <span class="lang-en">If you have any questions, please contact:</span>
+        </p>
+        <h5><i class="fas fa-envelope me-2"></i>fzhou4@zju.edu.cn</h5>
+    </div>
+</section>
+
+<!-- 申请表单弹窗 -->
+<div class="modal fade" id="applyModal" tabindex="-1" aria-labelledby="applyModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="applyModalLabel">
+                    <span class="lang-zh">申请职位</span>
+                    <span class="lang-en">Apply for Position</span>
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="name" class="form-label">
+                                <span class="lang-zh">姓名</span>
+                                <span class="lang-en">Name</span>
+                            </label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="email" class="form-label">
+                                <span class="lang-zh">电子邮箱</span>
+                                <span class="lang-en">Email</span>
+                            </label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="phone" class="form-label">
+                                <span class="lang-zh">联系电话</span>
+                                <span class="lang-en">Phone</span>
+                            </label>
+                            <input type="tel" class="form-control" id="phone">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="position" class="form-label">
+                                <span class="lang-zh">申请职位</span>
+                                <span class="lang-en">Position</span>
+                            </label>
+                            <select class="form-select" id="position" required>
+                                <option value="">
+                                    <span class="lang-zh">-- 请选择 --</span>
+                                    <span class="lang-en">-- Please select --</span>
+                                </option>
+                                <option>
+                                    <span class="lang-zh">博士后研究员 - 神经科学方向</span>
+                                    <span class="lang-en">Postdoctoral Researcher - Neuroscience</span>
+                                </option>
+                                <option>
+                                    <span class="lang-zh">科研助理 - 分子生物学实验室</span>
+                                    <span class="lang-en">Research Assistant - Molecular Biology Laboratory</span>
+                                </option>
+                                <option>
+                                    <span class="lang-zh">博士研究生 - 2026年秋季入学</span>
+                                    <span class="lang-en">PhD Student - Fall 2026 Admission</span>
+                                </option>
+                                <option>
+                                    <span class="lang-zh">访问学者 - 短期合作项目</span>
+                                    <span class="lang-en">Visiting Scholar - Short-term Collaboration</span>
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="education" class="form-label">
+                            <span class="lang-zh">最高学历</span>
+                            <span class="lang-en">Highest Education</span>
+                        </label>
+                        <input type="text" class="form-control" id="education" placeholder="例如：北京大学，生物学博士，2022年">
+                    </div>
+                    <div class="mb-3">
+                        <label for="experience" class="form-label">
+                            <span class="lang-zh">研究经历简述</span>
+                            <span class="lang-en">Research Experience</span>
+                        </label>
+                        <textarea class="form-control" id="experience" rows="3"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="motivation" class="form-label">
+                            <span class="lang-zh">申请动机</span>
+                            <span class="lang-en">Motivation</span>
+                        </label>
+                        <textarea class="form-control" id="motivation" rows="3"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="cv" class="form-label">
+                            <span class="lang-zh">上传简历 (PDF格式)</span>
+                            <span class="lang-en">Upload CV (PDF format)</span>
+                        </label>
+                        <input class="form-control" type="file" id="cv" accept=".pdf">
+                    </div>
+                    <div class="mb-3">
+                        <label for="documents" class="form-label">
+                            <span class="lang-zh">其他材料 (可选)</span>
+                            <span class="lang-en">Additional Documents (Optional)</span>
+                        </label>
+                        <input class="form-control" type="file" id="documents" multiple>
+                        <div class="form-text">
+                            <span class="lang-zh">可上传代表性论文、推荐信等</span>
+                            <span class="lang-en">You can upload representative papers, recommendation letters, etc.</span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    <span class="lang-zh">取消</span>
+                    <span class="lang-en">Cancel</span>
+                </button>
+                <button type="button" class="btn btn-primary">
+                    <span class="lang-zh">提交申请</span>
+                    <span class="lang-en">Submit Application</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 页脚 
+ <!-- 页脚 -->
+<footer class="bg-dark text-white py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>
+                    <span class="lang-zh">联系我们</span>
+                    <span class="lang-en">Contact Us</span>
+                </h5>
+                <p><i class="fas fa-map-marker-alt me-2"></i>
+                    <span class="lang-zh">浙江省杭州市上城区浙江大学华家池校区种子楼</span>
+                    <span class="lang-en">Seed Building, Huajiachi Campus, Zhejiang University, Shangcheng District, Hangzhou</span>
+                </p>
+                <p><i class="fas fa-phone me-2"></i>13588409659</p>
+                <p><i class="fas fa-envelope me-2"></i>fzhou4@zju.edu.cn</p>
+            </div>
+            <div class="col-md-4">
+                <h5>
+                    <span class="lang-zh">快速链接</span>
+                    <span class="lang-en">Quick Links</span>
+                </h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html" class="text-white">
+                        <span class="lang-zh">首页</span>
+                        <span class="lang-en">Home</span>
+                    </a></li>
+                    <li><a href="team.html" class="text-white">
+                        <span class="lang-zh">团队</span>
+                        <span class="lang-en">Team</span>
+                    </a></li>
+                    <li><a href="research.html" class="text-white">
+                        <span class="lang-zh">研究</span>
+                        <span class="lang-en">Research</span>
+                    </a></li>
+                    <li><a href="publications.html" class="text-white">
+                        <span class="lang-zh">论文</span>
+                        <span class="lang-en">Publications</span>
+                    </a></li>
+                    <li><a href="join.html" class="text-white">
+                        <span class="lang-zh">招聘</span>
+                        <span class="lang-en">Join Us</span>
+                    </a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>
+                    <span class="lang-zh">关注我们</span>
+                    <span class="lang-en">Follow Us</span>
+                </h5>
+                <div class="d-flex">
+                    <a href="#" class="text-white me-3 fs-5"><i class="fab fa-weixin"></i></a>
+                    <a href="#" class="text-white me-3 fs-5"><i class="fab fa-weibo"></i></a>
+                    <a href="#" class="text-white me-3 fs-5"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white fs-5"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr class="my-4">
+        <div class="text-center">
+            <p class="mb-0">
+                <span class="lang-zh">&copy; 2025 周峰泉课题组. 保留所有权利.</span>
+                <span class="lang-en">&copy; 2025 Fengquan Zhou Lab. All rights reserved.</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- 语言切换脚本 -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // 获取语言切换按钮
+        const zhButton = document.getElementById('lang-zh');
+        const enButton = document.getElementById('lang-en');
+        
+        // 检查本地存储中是否有语言偏好设置
+        const savedLanguage = localStorage.getItem('zhoulab-language');
+        if(savedLanguage === 'en') {
+            document.body.classList.add('english');
+            zhButton.classList.remove('active');
+            enButton.classList.add('active');
+        }
+        
+        // 中文按钮点击事件
+        zhButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.body.classList.remove('english');
+            localStorage.setItem('zhoulab-language', 'zh');
+            zhButton.classList.add('active');
+            enButton.classList.remove('active');
+        });
+        
+        // 英文按钮点击事件
+        enButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.body.classList.add('english');
+            localStorage.setItem('zhoulab-language', 'en');
+            enButton.classList.remove('active');
+            enButton.classList.add('active');
+        });
+    });
+</script>
+</body>
+</html>

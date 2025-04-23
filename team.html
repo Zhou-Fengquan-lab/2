@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fengquan Zhou lab - Team</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .page-header {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/team/team1.jpg');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 120px 0;  /* 增加上下内边距使区域变大 */
+        margin-bottom: 40px;
+        position: relative;
+        }
+    
+        .team-member {
+            transition: transform 0.3s ease;
+        }
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+        .social-icons a {
+            color: #0d6efd;
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+            margin-bottom: 50px;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background: #dee2e6;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+        }
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: -40px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #0d6efd;
+        }
+        
+        /* 语言切换相关样式 */
+        .lang-en {
+            display: none;
+        }
+        
+        body.english .lang-zh {
+            display: none;
+        }
+        
+        body.english .lang-en {
+            display: inline-block;
+        }
+        
+        .language-selector {
+            cursor: pointer;
+        }
+        
+        .language-selector.active {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<!-- 导航栏 -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <span class="lang-zh">周峰泉课题组</span>
+            <span class="lang-en">Zhou Lab</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        <span class="lang-zh">首页</span>
+                        <span class="lang-en">Home</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="team.html">
+                        <span class="lang-zh">团队</span>
+                        <span class="lang-en">Team</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="research.html">
+                        <span class="lang-zh">研究</span>
+                        <span class="lang-en">Research</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="publications.html">
+                        <span class="lang-zh">论文</span>
+                        <span class="lang-en">Publications</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="join.html">
+                        <span class="lang-zh">招聘</span>
+                        <span class="lang-en">Join Us</span>
+                    </a>
+                </li>
+                <li class="nav-item ms-2 d-flex align-items-center">
+                    <span id="lang-zh" class="language-selector text-white mx-1 active">中</span>
+                    <span class="text-white mx-1">|</span>
+                    <span id="lang-en" class="language-selector text-white mx-1">EN</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- 页面标题 -->
+<!-- 页面标题 -->
+<div class="page-header">
+    <div class="container text-center">
+        <h1 class="display-4">
+            <span class="lang-zh">我们的团队</span>
+            <span class="lang-en">Our Team</span>
+        </h1>
+        <p class="lead">
+            <span class="lang-zh">优秀的人才是科研创新的核心驱动力</span>
+            <span class="lang-en">Excellent talents are the core driving force of scientific innovation</span>
+        </p>
+        
+    </div>
+</div>
+
+<!-- 课题组负责人 -->
+<div class="container mb-5">
+    <h2 class="text-center mb-5">
+        <span class="lang-zh">课题组负责人</span>
+        <span class="lang-en">Principal Investigator</span>
+    </h2>
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <div class="card mb-5">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="images/team/zhou_fengquan.png" class="img-fluid rounded-start" alt="周峰泉教授照片">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h3 class="card-title">
+                                <span class="lang-zh">周峰泉 教授 / 博士生导师</span>
+                                <span class="lang-en">Prof. Fengquan Zhou / Ph.D. Supervisor</span>
+                            </h3>
+                            <p class="text-muted">
+                                <span class="lang-zh">浙江大学邵逸夫医院神经再生转化中心主任</span>
+                                <span class="lang-en">Director of the Center for Translational Neuroregeneration at Sir Run Run Shaw Hospital, Zhejiang University</span>
+                            </p>
+                            <div class="social-icons mb-3">
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                                <a href="#"><i class="fab fa-google"></i></a>
+                                <a href="#"><i class="fab fa-researchgate"></i></a>
+                                <a href="#"><i class="fab fa-orcid"></i></a>
+                            </div>
+                            <p>
+                                <span class="lang-zh">周峰泉教授于南京大学生化系获得本科与硕士学位，然后前往美国纽约州立大学布法罗分校获得解剖与细胞生物学博士学位。随后在约翰霍普金斯大学医学院完成博士后训练，并在该校担任助理教授十余年，2019年全职回国加入浙江大学。</span>
+                                <span class="lang-en">Professor Fengquan Zhou received his bachelor's and master's degrees from the Department of Biochemistry at Nanjing University, and then obtained his Ph.D. in Anatomy and Cell Biology from the State University of New York at Buffalo. He completed his postdoctoral training at Johns Hopkins University School of Medicine, where he also served as an Assistant Professor for over a decade before returning to China in 2019 to join Zhejiang University.</span>
+                            </p>
+                            <p>
+                                <span class="lang-zh">周教授是国际知名的神经发育与再生领域专家，研究方向包括轴突生长与再生、神经元极性建立、细胞骨架动力学以及脊髓和视神经损伤后的再生修复策略。</span>
+                                <span class="lang-en">Professor Zhou is an internationally recognized expert in the field of neural development and regeneration. His research focuses on axon growth and regeneration, neuronal polarity establishment, cytoskeletal dynamics, and regenerative strategies following spinal cord and optic nerve injuries.</span>
+                            </p>
+                            
+                            <h5 class="mt-4">
+                                <span class="lang-zh">教育背景</span>
+                                <span class="lang-en">Education</span>
+                            </h5>
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <p class="mb-0">
+                                        <span class="lang-zh">博士，解剖与细胞生物学</span>
+                                        <span class="lang-en">Ph.D., Anatomy and Cell Biology</span>
+                                    </p>
+                                    <p class="text-muted">
+                                        <span class="lang-zh">美国纽约州立大学布法罗分校，1995-2000</span>
+                                        <span class="lang-en">State University of New York at Buffalo, USA, 1995-2000</span>
+                                    </p>
+                                </div>
+                                <div class="timeline-item">
+                                    <p class="mb-0">
+                                        <span class="lang-zh">硕士，生物化学</span>
+                                        <span class="lang-en">M.Sc., Biochemistry</span>
+                                    </p>
+                                    <p class="text-muted">
+                                        <span class="lang-zh">南京大学，1992-1995</span>
+                                        <span class="lang-en">Nanjing University, China, 1992-1995</span>
+                                    </p>
+                                </div>
+                                <div class="timeline-item">
+                                    <p class="mb-0">
+                                        <span class="lang-zh">学士，生物化学</span>
+                                        <span class="lang-en">B.Sc., Biochemistry</span>
+                                    </p>
+                                    <p class="text-muted">
+                                        <span class="lang-zh">南京大学，1988-1992</span>
+                                        <span class="lang-en">Nanjing University, China, 1988-1992</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 教师与研究员 -->
+<div class="container mb-5">
+    <h2 class="text-center mb-5">
+        <span class="lang-zh">教师与研究员</span>
+        <span class="lang-en">Faculty and Researchers</span>
+    </h2>
+    <div class="row g-4">
+        <div class="col-lg-3 col-md-6">
+            <div class="card team-member">
+                <img src="images/team/yangshuguang.png" class="card-img-top" alt="团队成员照片">
+                <div class="card-body text-center">
+                    <h5 class="card-title">
+                        <span class="lang-zh">杨树广博士</span>
+                        <span class="lang-en">Dr. Yang shuguang</span>
+                    </h5>
+                    <p class="text-muted">
+                        <span class="lang-zh">科研主管</span>
+                        <span class="lang-en">Research Director</span>
+                    </p>
+                    <p class="card-text">
+                        <span class="lang-zh">专注于神经再生和重编程的分子机制研究。</span>
+                        <span class="lang-en">Focuses on molecular mechanisms of neuron regeneration and reprogramming.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="card team-member">
+                <img src="images/team/nierui.png" class="card-img-top" alt="团队成员照片">
+                <div class="card-body text-center">
+                    <h5 class="card-title">
+                        <span class="lang-zh">聂睿</span>
+                        <span class="lang-en">Nie Rui</span>
+                    </h5>
+                    <p class="text-muted">
+                        <span class="lang-zh">行政主管</span>
+                        <span class="lang-en">Administration Director</span>
+                    </p>
+                    <p class="card-text">
+                        <span class="lang-zh">负责管理神经再生转化中心的行政事务</span>
+                        <span class="lang-en">Administrative Director of the Center for Translational Neuroregeneration.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="card team-member">
+                <img src="images/team/wangyingying.png" class="card-img-top" alt="团队成员照片">
+                <div class="card-body text-center">
+                    <h5 class="card-title">
+                        <span class="lang-zh">王颖颖 博士</span>
+                        <span class="lang-en">Dr. Yingying Wang</span>
+                    </h5>
+                    <p class="text-muted">
+                        <span class="lang-zh">助理研究员</span>
+                        <span class="lang-en">Assistant Research Fellow</span>
+                    </p>
+                    <p class="card-text">
+                        <span class="lang-zh">专注于阿尔茨海默病机制研究。</span>
+                        <span class="lang-en">Focused on the study of Alzheimer's disease mechanisms.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="card team-member">
+                <img src="images/team/dingchenyun.png" class="card-img-top" alt="团队成员照片">
+                <div class="card-body text-center">
+                    <h5 class="card-title">
+                        <span class="lang-zh">丁宸云 博士</span>
+                        <span class="lang-en">Dr. Chenyun Ding</span>
+                    </h5>
+                    <p class="text-muted">
+                        <span class="lang-zh">助理研究员</span>
+                        <span class="lang-en">Assistant Research Fellow</span>
+                    </p>
+                    <p class="card-text">
+                        <span class="lang-zh">专注于表观遗传学与神经再生研究。</span>
+                        <span class="lang-en">Focuses on epigenetics and neural regeneration.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="card team-member">
+                <img src="images/team/tengpeng.jpg" class="card-img-top" alt="团队成员照片">
+                <div class="card-body text-center">
+                    <h5 class="card-title">
+                        <span class="lang-zh">滕鹏 博士</span>
+                        <span class="lang-en">Dr. Peng Teng</span>
+                    </h5>
+                    <p class="text-muted">
+                        <span class="lang-zh">助理研究员</span>
+                        <span class="lang-en">Assistant Research Fellow</span>
+                    </p>
+                    <p class="card-text">
+                        <span class="lang-zh">专注于脑卒中机制研究。</span>
+                        <span class="lang-en">Focused on the study of stroke mechanisms.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<!-- 博士后 -->
+<div class="container mb-5">
+    <h2 class="text-center mb-5">
+        <span class="lang-zh">博士后</span>
+        <span class="lang-en">Postdoctoral researcher</span>
+    </h2>
+    <div class="row">
+        <div class="col-12 mb-4">
+            <h4 class="mb-4">
+                <span class="lang-zh">博士后</span>
+                <span class="lang-en">Postdoctoral researcher</span>
+            </h4>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="card team-member">
+                        <img src="images/team/gaoyuqi.png" class="card-img-top" alt="团队成员照片">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">
+                                <span class="lang-zh">高雨琦</span>
+                                <span class="lang-en">Yuqi Gao</span>
+                            </h5>
+                            <p class="text-muted">
+                                <span class="lang-zh">博士后</span>
+                                <span class="lang-en">Postdoctoral researcher</span>
+                            </p>
+                            <p class="card-text">
+                                <span class="lang-zh">专注于脑卒中机制研究。</span>
+                                <span class="lang-en">Focused on the study of stroke mechanisms.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card team-member">
+                        <img src="images/team/lichangping.jpg" class="card-img-top" alt="团队成员照片">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">
+                                <span class="lang-zh">李长平</span>
+                                <span class="lang-en">Changping Li</span>
+                            </h5>
+                            <p class="text-muted">
+                                <span class="lang-zh">博士后研究员</span>
+                                <span class="lang-en">Postdoctoral researcher</span>
+                            </p>
+                            <p class="card-text">
+                                <span class="lang-zh">专注于神经再生与损伤修复。</span>
+                                <span class="lang-en">Focused on the study of stroke mechanisms.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card team-member">
+                        <img src="images/team/zhoudanni.png" class="card-img-top" alt="团队成员照片">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">
+                                <span class="lang-zh">周丹妮</span>
+                                <span class="lang-en">Danni Zhou</span>
+                            </h5>
+                            <p class="text-muted">
+                                <span class="lang-zh">博士后研究员</span>
+                                <span class="lang-en">Postdoctoral researcher</span>
+                            </p>
+                            <p class="card-text">
+                                <span class="lang-zh">专注于干细胞研究。</span>
+                                <span class="lang-en">Focused on the study of stroke mechanisms.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card team-member">
+                            <img src="images/team/shuxiaoqiu.png"class="card-img-top" alt="团队成员照片">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">
+                                    <span class="lang-zh">舒晓秋</span>
+                                    <span class="lang-en">Xiaoqiu Shu</span>
+                                </h5>
+                                <p class="text-muted">
+                                    <span class="lang-zh">博士后研究员</span>
+                                    <span class="lang-en">Postdoctoral researcher</span>
+                                </p>
+                                <p class="card-text">
+                                    <span class="lang-zh">专注于渐冻症机制研究。</span>
+                                    <span class="lang-en">Focused on the study of stroke mechanisms.</span>
+                                </p>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+<!-- 研究助理 -->
+<div class="container mb-5">
+    <h2 class="text-center mb-5">
+        <span class="lang-zh">研究助理</span>
+        <span class="lang-en">Research Assistants</span>
+    </h2>
+    <div class="row g-4">
+        <div class="col-lg-3 col-md-6">
+            <div class="card team-member">
+                <img src="images/team/zhangjiawen.png" class="card-img-top" alt="研究助理照片">
+                <div class="card-body text-center">
+                    <h5 class="card-title">
+                        <span class="lang-zh">张嘉闻</span>
+                        <span class="lang-en">Jiawen Zhang</span>
+                    </h5>
+                    <p class="text-muted">
+                        <span class="lang-zh">研究助理</span>
+                        <span class="lang-en">Research Assistant</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="card team-member">
+                <img src="images/team/jiangmingdi.jpg" class="card-img-top" alt="研究助理照片">
+                <div class="card-body text-center">
+                    <h5 class="card-title">
+                        <span class="lang-zh">姜鸣迪</span>
+                        <span class="lang-en">Mingdi Jiang</span>
+                    </h5>
+                    <p class="text-muted">
+                        <span class="lang-zh">研究助理</span>
+                        <span class="lang-en">Research Assistant</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="card team-member">
+                <img src="images/team/qinfanping.jpg" class="card-img-top" alt="研究助理照片">
+                <div class="card-body text-center">
+                    <h5 class="card-title">
+                        <span class="lang-zh">秦凡平</span>
+                        <span class="lang-en">Fanping Qin</span>
+                    </h5>
+                    <p class="text-muted">
+                        <span class="lang-zh">研究助理</span>
+                        <span class="lang-en">Research Assistant</span>
+                    </p>
+                   
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="card team-member">
+                <img src="images/team/bianying.png" class="card-img-top" alt="研究助理照片">
+                <div class="card-body text-center">
+                    <h5 class="card-title">
+                        <span class="lang-zh">边莹</span>
+                        <span class="lang-en">Ying Bian</span>
+                    </h5>
+                    <p class="text-muted">
+                        <span class="lang-zh">研究助理</span>
+                        <span class="lang-en">Research Assistant</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 研究生 -->
+<div class="container mb-5">
+    <h2 class="text-center mb-5">
+        <span class="lang-zh">研究生</span>
+        <span class="lang-en">Graduate Students</span>
+    </h2>
+    <div class="row">
+        <div class="col-12 mb-4">
+            <h4 class="mb-4">
+                <span class="lang-zh">博士研究生</span>
+                <span class="lang-en">Ph.D. Students</span>
+            </h4>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="card team-member">
+                        <img src="images/team/zhangjing.png" class="card-img-top" alt="团队成员照片">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">
+                                <span class="lang-zh">章靖</span>
+                                <span class="lang-en">Jing Zhang</span>
+                            </h5>
+                            <p class="text-muted">
+                                <span class="lang-zh">博士研究生</span>
+                                <span class="lang-en">Ph.D. Student</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card team-member">
+                        <img src="images/team/yuzikai.png" class="card-img-top" alt="团队成员照片">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">
+                                <span class="lang-zh">余滋恺</span>
+                                <span class="lang-en">Zikai Yu</span>
+                            </h5>
+                            <p class="text-muted">
+                                <span class="lang-zh">博士研究生</span>
+                                <span class="lang-en">Ph.D. Student</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card team-member">
+                        <img src="images/team/xieqin.png" class="card-img-top" alt="团队成员照片">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">
+                                <span class="lang-zh">谢芹</span>
+                                <span class="lang-en">Qin Xie</span>
+                            </h5>
+                            <p class="text-muted">
+                                <span class="lang-zh">博士研究生</span>
+                                <span class="lang-en">Ph.D. Student</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        
+        <!-- 硕士研究生 -->
+        <div class="col-12">
+            <h4 class="mb-4">
+                <span class="lang-zh">硕士研究生</span>
+                <span class="lang-en">Master's Students</span>
+            </h4>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="card team-member">
+                        <img src="images/team/yangchendi.jpg" class="card-img-top" alt="团队成员照片">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">
+                                <span class="lang-zh">杨晨頔</span>
+                                <span class="lang-en">Chendi Yang</span>
+                            </h5>
+                            <p class="text-muted">
+                                <span class="lang-zh">联合培养硕士研究生</span>
+                                <span class="lang-en">Jointly Trained Master's Student</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card team-member">
+                        <img src="images/team/liangxiwen.jpg" class="card-img-top" alt="团队成员照片">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">
+                                <span class="lang-zh">梁曦文</span>
+                                <span class="lang-en">Xiwen Liang</span>
+                            </h5>
+                            <p class="text-muted">
+                                <span class="lang-zh">联合培养硕士研究生</span>
+                                <span class="lang-en">Jointly Trained Master's Student</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 加入我们 CTA -->
+<div class="container py-5 text-center">
+    <h2 class="mb-4">
+        <span class="lang-zh">加入我们的研究团队</span>
+        <span class="lang-en">Join Our Research Team</span>
+    </h2>
+    <p class="lead mb-4">
+        <span class="lang-zh">我们始终欢迎有激情、有创新精神的科研人才加入课题组</span>
+        <span class="lang-en">We always welcome passionate and innovative scientific talents to join our lab</span>
+    </p>
+    <a href="join.html" class="btn btn-primary btn-lg">
+        <span class="lang-zh">查看招聘信息</span>
+        <span class="lang-en">View Recruitment Information</span>
+    </a>
+</div>
+
+<!-- 页脚 -->
+<footer class="bg-dark text-white py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>
+                    <span class="lang-zh">联系我们</span>
+                    <span class="lang-en">Contact Us</span>
+                </h5>
+                <p><i class="fas fa-map-marker-alt me-2"></i>
+                    <span class="lang-zh">杭州市上城区浙江大学华家池校区种子楼</span>
+                    <span class="lang-en">Seed Building, Huajiachi Campus, Zhejiang University, Shangcheng District, Hangzhou</span>
+                </p>
+                <p><i class="fas fa-phone me-2"></i>
+                    <span class="lang-zh">联系人聂老师：13588409659</span>
+                    <span class="lang-en">Contact: Ms. Nie: +86 13588409659</span>
+                </p>
+                <p><i class="fas fa-envelope me-2"></i>fzhou4@zju.edu.cn</p>
+            </div>
+            <div class="col-md-4">
+                <h5>
+                    <span class="lang-zh">快速链接</span>
+                    <span class="lang-en">Quick Links</span>
+                </h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html" class="text-white">
+                        <span class="lang-zh">首页</span>
+                        <span class="lang-en">Home</span>
+                    </a></li>
+                    <li><a href="team.html" class="text-white">
+                        <span class="lang-zh">团队</span>
+                        <span class="lang-en">Team</span>
+                    </a></li>
+                    <li><a href="research.html" class="text-white">
+                        <span class="lang-zh">研究</span>
+                        <span class="lang-en">Research</span>
+                    </a></li>
+                    <li><a href="publications.html" class="text-white">
+                        <span class="lang-zh">论文</span>
+                        <span class="lang-en">Publications</span>
+                    </a></li>
+                    <li><a href="join.html" class="text-white">
+                        <span class="lang-zh">招聘</span>
+                        <span class="lang-en">Join Us</span>
+                    </a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>
+                    <span class="lang-zh">关注我们</span>
+                    <span class="lang-en">Follow Us</span>
+                </h5>
+                <div class="d-flex">
+                    <a href="#" class="text-white me-3 fs-5"><i class="fab fa-weixin"></i></a>
+                    <a href="#" class="text-white me-3 fs-5"><i class="fab fa-weibo"></i></a>
+                    <a href="#" class="text-white me-3 fs-5"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white fs-5"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr class="my-4">
+        <div class="text-center">
+            <p class="mb-0">
+                <span class="lang-zh">&copy; 2025 周峰泉课题组. 保留所有权利.</span>
+                <span class="lang-en">&copy; 2025 Fengquan Zhou Lab. All rights reserved.</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- 语言切换脚本 -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // 获取语言切换按钮
+        const zhButton = document.getElementById('lang-zh');
+        const enButton = document.getElementById('lang-en');
+        
+        // 检查本地存储中是否有语言偏好设置
+        const savedLanguage = localStorage.getItem('zhoulab-language');
+        if(savedLanguage === 'en') {
+            document.body.classList.add('english');
+            zhButton.classList.remove('active');
+            enButton.classList.add('active');
+        }
+        
+        // 中文按钮点击事件
+        zhButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.body.classList.remove('english');
+            localStorage.setItem('zhoulab-language', 'zh');
+            zhButton.classList.add('active');
+            enButton.classList.remove('active');
+        });
+        
+        // 英文按钮点击事件
+        enButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.body.classList.add('english');
+            localStorage.setItem('zhoulab-language', 'en');
+            zhButton.classList.remove('active');
+            enButton.classList.add('active');
+        });
+    });
+</script>
+</body>
+</html>

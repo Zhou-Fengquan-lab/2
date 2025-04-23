@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fengquan Zhou lab</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/zhou_cover.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            margin-bottom: 40px;
+        }
+        .news-item {
+            border-left: 4px solid #0d6efd;
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+        .research-card {
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+        .research-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        /* 语言切换相关样式 */
+        .lang-en {
+            display: none;
+        }
+        
+        body.english .lang-zh {
+            display: none;
+        }
+        
+        body.english .lang-en {
+            display: inline-block;
+        }
+        
+        .language-selector {
+            cursor: pointer;
+        }
+        
+        .language-selector.active {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<!-- 导航栏 -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <span class="lang-zh">周峰泉课题组</span>
+            <span class="lang-en">Zhou Lab</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">
+                        <span class="lang-zh">首页</span>
+                        <span class="lang-en">Home</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="team.html">
+                        <span class="lang-zh">团队</span>
+                        <span class="lang-en">Team</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="research.html">
+                        <span class="lang-zh">研究</span>
+                        <span class="lang-en">Research</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="publications.html">
+                        <span class="lang-zh">论文</span>
+                        <span class="lang-en">Publications</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="join.html">
+                        <span class="lang-zh">招聘</span>
+                        <span class="lang-en">Join Us</span>
+                    </a>
+                </li>
+                <li class="nav-item ms-2 d-flex align-items-center">
+                    <span id="lang-zh" class="language-selector text-white mx-1 active">中</span>
+                    <span class="text-white mx-1">|</span>
+                    <span id="lang-en" class="language-selector text-white mx-1">EN</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- 英雄区域 -->
+<div class="hero-section">
+    <div class="container text-center">
+        <h1 class="display-4">
+            <span class="lang-zh">欢迎来到周峰泉课题组</span>
+            <span class="lang-en">Welcome to Zhou Lab</span>
+        </h1>
+        <p class="lead">
+            <span class="lang-zh">探索生命科学前沿，引领创新研究</span>
+            <span class="lang-en">Exploring frontiers in life sciences, leading innovative research</span>
+        </p>
+        <a href="join.html" class="btn btn-primary btn-lg mt-3">
+            <span class="lang-zh">加入我们</span>
+            <span class="lang-en">Join Us</span>
+        </a>
+    </div>
+</div>
+
+<!-- 课题组简介 -->
+<div class="container mb-5">
+    <div class="row">
+        <div class="col-lg-8">
+            <h2 class="mb-4">
+                <span class="lang-zh">课题组简介</span>
+                <span class="lang-en">About Our Lab</span>
+            </h2>
+            <p class="lead">
+                <span class="lang-zh">学术带头人周峰泉教授</span>
+                <span class="lang-en">Principal Investigator: Professor Fengquan Zhou</span>
+            </p>
+            <p>
+                <span class="lang-zh">于南京大学生化系获得本科与硕士学位，然后前往美国纽约州立大学布法罗分校 (SUNY at Buffalo) 获得解剖与细胞生物学博士学位。在美国北卡罗莱纳州教堂山分校 (UNC-Chapel Hill) 神经科学中心经过博士后培训后，于2005-2022年在美国约翰斯-霍普金斯大学医学院 (Johns Hopkins University School of Medicine) 骨外科及神经科学系历任助理教授，副教授，和终身正教授。</span>
+                <span class="lang-en">Professor Zhou received his bachelor's and master's degrees from the Department of Biochemistry at Nanjing University, then obtained his Ph.D. in Anatomy and Cell Biology from the State University of New York at Buffalo. After postdoctoral training at the Neuroscience Center of the University of North Carolina at Chapel Hill (UNC-Chapel Hill), he served as Assistant Professor, Associate Professor, and tenured Full Professor in the Department of Orthopedic Surgery and Neuroscience at Johns Hopkins University School of Medicine from 2005 to 2022.</span>
+            </p>
+            <p>
+                <span class="lang-zh">周峰泉教授2022年7月回国后担任浙江大学求是讲席教授，及浙江大学医学院附属邵逸夫医院神经再生转化中心负责人。周教授长期致力于神经发育，神经损伤和修复相关的研究工作，尤其在神经再生的分子及细胞机制研究领域具有国际领先地位。</span>
+                <span class="lang-en">After returning to China in July 2022, Professor Zhou was appointed as Qiushi Chair Professor at Zhejiang University and Director of the Neural Regeneration and Translational Center at Sir Run Run Shaw Hospital, School of Medicine, Zhejiang University. Professor Zhou has long been dedicated to research in neural development, neural injury, and repair, and holds an internationally leading position in the field of molecular and cellular mechanisms of neural regeneration.</span>
+            </p>
+            <a href="team.html" class="btn btn-outline-primary">
+                <span class="lang-zh">了解我们的团队</span>
+                <span class="lang-en">Learn about our team</span> &rarr;
+            </a>
+        </div>
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">
+                        <span class="lang-zh">最新动态</span>
+                        <span class="lang-en">Latest News</span>
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <div class="news-item">
+                        <h5>
+                            <span class="lang-zh">最新研究成果发表在Advance science</span>
+                            <span class="lang-en">Latest research published in Advanced Science</span>
+                        </h5>
+                        <p class="text-muted">2025-03-12</p>
+                    </div>
+                    <div class="news-item">
+                        <h5>
+                            <span class="lang-zh">周峰泉教授荣获爱斯唯尔2024中国高被引学者</span>
+                            <span class="lang-en">Prof. Zhou honored as Elsevier 2024 Highly Cited Researcher in China</span>
+                        </h5>
+                        <p class="text-muted">2024-12-30</p>
+                    </div>
+                    <div class="news-item">
+                        <h5>
+                            <span class="lang-zh">课题组丁宸云助理研究员荣获国家自然科学基金青年项目</span>
+                            <span class="lang-en">Dr. Chenyun Ding awarded NSFC Young Scientists Fund</span>
+                        </h5>
+                        <p class="text-muted">2024-08-10</p>
+                    </div>
+                    <div class="news-item">
+                        <h5>
+                            <span class="lang-zh">课题组在Nature Communications发表神经再生研究重要成果</span>
+                            <span class="lang-en">Lab publishes key findings on neural regeneration in Nature Communications</span>
+                        </h5>
+                        <p class="text-muted">2024-04-20</p>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 研究领域 -->
+<div class="container-fluid bg-light py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">
+            <span class="lang-zh">研究领域</span>
+            <span class="lang-en">Research Areas</span>
+        </h2>
+        <div class="row g-4">
+            <!-- 研究领域1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card research-card">
+                    <img src="images/rgc.png" class="card-img-top" alt="Research Area 1">
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <span class="lang-zh">中枢神经系统损伤、修复与再生</span>
+                            <span class="lang-en">CNS Injury, Repair and Regeneration</span>
+                        </h4>
+                        <p class="card-text">
+                            <span class="lang-zh">中枢神经系统损伤，修复，与再生研究,如脑损伤，脊椎损伤，和视网膜损伤与疾病 （青光眼、黄斑病变及许多遗传性眼科疾病）。重点方向为细胞重编程和染色质重塑</span>
+                            <span class="lang-en">Research on central nervous system injury, repair, and regeneration, including brain injury, spinal cord injury, and retinal injury and diseases (glaucoma, macular degeneration, and various hereditary eye diseases). Our focus is on cell reprogramming and chromatin remodeling.</span>
+                        </p>
+                        <a href="research.html#neuroscience" class="btn btn-outline-primary">
+                            <span class="lang-zh">了解更多</span>
+                            <span class="lang-en">Learn More</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 研究领域2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card research-card">
+                    <img src="images/ptbp1.png" class="card-img-top" alt="Research Area 2">
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <span class="lang-zh">神经系统细胞成熟与衰老，细胞重编程</span>
+                            <span class="lang-en">Neural Cell Maturation, Aging and Reprogramming</span>
+                        </h4>
+                        <p class="card-text">
+                            <span class="lang-zh">中枢神经系统损伤，修复，与再生研究,如脑损伤，脊椎损伤，和视网膜损伤与疾病 （青光眼、黄斑病变及许多遗传性眼科疾病）。重点方向为细胞重编程和染色质重塑</span>
+                            <span class="lang-en">Study of maturation and aging processes in the nervous system cells, focusing on cellular reprogramming and chromatin remodeling techniques to reverse neurodegeneration and promote regeneration.</span>
+                        </p>
+                        <a href="research.html#immunology" class="btn btn-outline-primary">
+                            <span class="lang-zh">了解更多</span>
+                            <span class="lang-en">Learn More</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 研究领域3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card research-card">
+                    <img src="images/ad.png" class="card-img-top" alt="Research Area 3">
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <span class="lang-zh">神经退行性疾病机制与治疗</span>
+                            <span class="lang-en">Mechanisms and Treatment of Neurodegenerative Diseases</span>
+                        </h4>
+                        <p class="card-text">
+                            <span class="lang-zh">哺乳动物神经系统细胞的成熟与衰老的调控机制及其在神经再生和神经退行性疾病中的作用</span>
+                            <span class="lang-en">Investigating regulatory mechanisms of maturation and aging in mammalian nervous system cells and their roles in neural regeneration and neurodegenerative diseases.</span>
+                        </p>
+                        <a href="research.html#gene-therapy" class="btn btn-outline-primary">
+                            <span class="lang-zh">了解更多</span>
+                            <span class="lang-en">Learn More</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 研究领域4 -->
+            <div class="col-md-4 mb-4">
+                <div class="card research-card">
+                    <img src="images/KDM6A.png" class="card-img-top" alt="Research Area 4">
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <span class="lang-zh">表观遗传学与神经再生</span>
+                            <span class="lang-en">Epigenetics and Neural Regeneration</span>
+                        </h4>
+                        <p class="card-text">
+                            <span class="lang-zh">探究表观遗传修饰在神经细胞重编程和神经再生过程中的关键作用，揭示染色质重塑和基因表达调控的分子机制</span>
+                            <span class="lang-en">Exploring the crucial role of epigenetic modifications in neural cell reprogramming and regeneration, elucidating molecular mechanisms of chromatin remodeling and gene expression regulation.</span>
+                        </p>
+                        <a href="research.html#epigenetics" class="btn btn-outline-primary">
+                            <span class="lang-zh">了解更多</span>
+                            <span class="lang-en">Learn More</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 研究领域5 -->
+            <div class="col-md-4 mb-4">
+                <div class="card research-card">
+                    <img src="images/OPRM1.png" class="card-img-top" alt="Research Area 5">
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <span class="lang-zh">视网膜神经元保护与再生</span>
+                            <span class="lang-en">Retinal Neuron Protection and Regeneration</span>
+                        </h4>
+                        <p class="card-text">
+                            <span class="lang-zh">研究视网膜神经节细胞的保护与再生机制，探索针对青光眼和视网膜变性疾病的新型治疗策略和药物靶点</span>
+                            <span class="lang-en">Investigating protection and regeneration mechanisms of retinal ganglion cells, exploring new therapeutic strategies and drug targets for glaucoma and retinal degenerative diseases.</span>
+                        </p>
+                        <a href="research.html#retina" class="btn btn-outline-primary">
+                            <span class="lang-zh">了解更多</span>
+                            <span class="lang-en">Learn More</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 研究领域6 -->
+            <div class="col-md-4 mb-4">
+                <div class="card research-card">
+                    <img src="images/AI.png" class="card-img-top" alt="Research Area 6">
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <span class="lang-zh">单细胞组学，大数据分析，和高清组织三维成像</span>
+                            <span class="lang-en">Single-cell Omics, Big Data Analysis, and 3D Tissue Imaging</span>
+                        </h4>
+                        <p class="card-text">
+                            <span class="lang-zh">推动神经再生基础研究向临床应用转化，开发针对脊髓损伤、视神经损伤和神经退行性疾病的创新疗法</span>
+                            <span class="lang-en">Utilizing advanced technologies in single-cell analysis, bioinformatics, and high-resolution imaging to gain deeper insights into neural development and regeneration mechanisms.</span>
+                        </p>
+                        <a href="research.html#translation" class="btn btn-outline-primary">
+                            <span class="lang-zh">了解更多</span>
+                            <span class="lang-en">Learn More</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 页脚 -->
+<footer class="bg-dark text-white py-4 mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>
+                    <span class="lang-zh">联系我们</span>
+                    <span class="lang-en">Contact Us</span>
+                </h5>
+                <p><i class="fas fa-map-marker-alt me-2"></i>
+                    <span class="lang-zh">杭州市上城区浙江大学华家池校区种子楼</span>
+                    <span class="lang-en">Seed Building, Huajiachi Campus, Zhejiang University, Shangcheng District, Hangzhou</span>
+                </p>
+                <p><i class="fas fa-phone me-2"></i>
+                    <span class="lang-zh">联系人聂老师：13588409659</span>
+                    <span class="lang-en">Contact: Ms. Nie: +86 13588409659</span>
+                </p>
+                <p><i class="fas fa-envelope me-2"></i>fzhou4@zju.edu.cn</p>
+            </div>
+            <div class="col-md-4">
+                <h5>
+                    <span class="lang-zh">快速链接</span>
+                    <span class="lang-en">Quick Links</span>
+                </h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html" class="text-white">
+                        <span class="lang-zh">首页</span>
+                        <span class="lang-en">Home</span>
+                    </a></li>
+                    <li><a href="team.html" class="text-white">
+                        <span class="lang-zh">团队</span>
+                        <span class="lang-en">Team</span>
+                    </a></li>
+                    <li><a href="research.html" class="text-white">
+                        <span class="lang-zh">研究</span>
+                        <span class="lang-en">Research</span>
+                    </a></li>
+                    <li><a href="publications.html" class="text-white">
+                        <span class="lang-zh">论文</span>
+                        <span class="lang-en">Publications</span>
+                    </a></li>
+                    <li><a href="join.html" class="text-white">
+                        <span class="lang-zh">招聘</span>
+                        <span class="lang-en">Join Us</span>
+                    </a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>
+                    <span class="lang-zh">关注我们</span>
+                    <span class="lang-en">Follow Us</span>
+                </h5>
+                <div class="d-flex">
+                    <a href="#" class="text-white me-3 fs-5"><i class="fab fa-weixin"></i></a>
+                    <a href="#" class="text-white me-3 fs-5"><i class="fab fa-weibo"></i></a>
+                    <a href="#" class="text-white me-3 fs-5"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white fs-5"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr class="my-4">
+        <div class="text-center">
+            <p class="mb-0">
+                <span class="lang-zh">&copy; 2025 周峰泉课题组. 保留所有权利.</span>
+                <span class="lang-en">&copy; 2025 Fengquan Zhou Lab. All rights reserved.</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- 语言切换脚本 -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // 获取语言切换按钮
+        const zhButton = document.getElementById('lang-zh');
+        const enButton = document.getElementById('lang-en');
+        
+        // 检查本地存储中是否有语言偏好设置
+        const savedLanguage = localStorage.getItem('zhoulab-language');
+        if(savedLanguage === 'en') {
+            document.body.classList.add('english');
+            zhButton.classList.remove('active');
+            enButton.classList.add('active');
+        }
+        
+        // 中文按钮点击事件
+        zhButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.body.classList.remove('english');
+            localStorage.setItem('zhoulab-language', 'zh');
+            zhButton.classList.add('active');
+            enButton.classList.remove('active');
+        });
+        
+        // 英文按钮点击事件
+        enButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.body.classList.add('english');
+            localStorage.setItem('zhoulab-language', 'en');
+            zhButton.classList.add('active');
+            enButton.classList.remove('active');
+        });
+    });
+</script>
+</body>
+</html>
